@@ -15,7 +15,7 @@ carlos	martinez	4234234		hello@demo.com
 ```
 > Para separar las columnas se usa la expresion regular `/\t+/` que en su lugar podria ser utilizada `/(\t+|\s{2}|\s{4})/`.
 > 
-> Ver linea 38 del archivo [dist/tsvToJson.ts](dist/tsvToJson.ts)
+> Ver linea 38 del archivo [dist/tsvToJson.ts](dist/tsvToJson.ts#L38)
 
 Salida JSON:
 ```json
@@ -27,3 +27,7 @@ Salida JSON:
 ```
 
 > Es necesario usar la primera fila como nombre de columnas.
+
+
+> **IMPORTANTE:**
+> Este proyecto fue escrito en TypeScript y compilado para ES5. Ademas, utiliza [XMLHttpRequest](https://developer.mozilla.org/es/docs/XMLHttpRequest) para obtener el contenido del archivo y [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) para convertir a formato JSON.
