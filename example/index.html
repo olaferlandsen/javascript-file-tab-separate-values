@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <script src="../dist/tsvToJson.js"></script>
+	</head>
+	<body>
+		<div>
+			<div>
+				<h3>You TSV to JSON:</h3>
+				<div style="width: 80%;overflow: auto; display: block">
+					<textarea id="view" style="width: 80%; height: 200px; display: block"></textarea>
+				</div>
+
+			</div>
+		</div>
+		<script>
+			var content = new tsvToJson('sample.txt');
+			document.getElementById('view').value = JSON.stringify(content);
+		</script>
+	</body>
+</html>

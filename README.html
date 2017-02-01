@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="javascript-file-tab-separate-values">javascript-file-tab-separate-values</h1>
+
+<p>Convierte el contenido de un archivo TSV a JSON.</p>
+
+<blockquote>
+<p>Los archivos TSV usan como separador o delimitador de columna el caracter TAB.</p>
+</blockquote>
+
+<p>Ejemplo TSV:
+<code>
+name    lastname    phone       email
+john    smith       01342433    admin@demo.com
+karl    johnson     42342234    demo@demo.com
+carlos  martinez    4234234     hello@demo.com
+</code></p>
+
+<p>Salida JSON:
+<code>json
+[
+    {&quot;name&quot;:&quot;carlos&quot;,&quot;lastname&quot;:&quot;martinez&quot;,&quot;phone&quot;:&quot;4234234&quot;,&quot;email&quot;:&quot;hello@demo.com&quot;},
+    {&quot;name&quot;:&quot;carlos&quot;,&quot;lastname&quot;:&quot;martinez&quot;,&quot;phone&quot;:&quot;4234234&quot;,&quot;email&quot;:&quot;hello@demo.com&quot;},
+    {&quot;name&quot;:&quot;carlos&quot;,&quot;lastname&quot;:&quot;martinez&quot;,&quot;phone&quot;:&quot;4234234&quot;,&quot;email&quot;:&quot;hello@demo.com&quot;}
+]
+</code></p>
+
+<blockquote>
+<p>Es necesario usar la primera fila como nombre de columnas.</p>
+</blockquote>
+
+</body>
+</html>
