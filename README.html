@@ -20,6 +20,12 @@ karl    johnson     42342234    demo@demo.com
 carlos  martinez    4234234     hello@demo.com
 </code></p>
 
+<blockquote>
+<p>Para separar las columnas se usa la expresion regular <code>/\t+/</code> que en su lugar podria ser utilizada <code>/(\t+|\s{2}|\s{4})/</code>.</p>
+
+<p>Ver linea 38 del archivo <a href="dist/tsvToJson.ts">dist/tsvToJson.ts</a></p>
+</blockquote>
+
 <p>Salida JSON:
 <code>json
 [
