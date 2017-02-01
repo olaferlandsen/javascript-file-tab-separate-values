@@ -6,7 +6,7 @@ Convierte el contenido de un archivo TSV a JSON.
 > Los archivos TSV usan como separador o delimitador de columna el caracter TAB.
 
 
-Ejemplo TSV:
+### Ejemplo TSV:
 ```
 name	lastname	phone		email
 john	smith		01342433	admin@demo.com
@@ -17,7 +17,7 @@ carlos	martinez	4234234		hello@demo.com
 > 
 > Ver linea 38 del archivo [dist/tsvToJson.ts](dist/tsvToJson.ts#L38)
 
-Salida JSON:
+###Salida JSON:
 ```json
 [
 	{"name":"carlos","lastname":"martinez","phone":"4234234","email":"hello@demo.com"},
@@ -25,8 +25,12 @@ Salida JSON:
 	{"name":"carlos","lastname":"martinez","phone":"4234234","email":"hello@demo.com"}
 ]
 ```
-
 > Es necesario usar la primera fila como nombre de columnas.
+
+### Modo de uso:
+```javascript
+new tsvToJson( 'file://sample.txt' );
+```
 
 
 > **IMPORTANTE:**

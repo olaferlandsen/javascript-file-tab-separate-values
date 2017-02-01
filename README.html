@@ -12,13 +12,13 @@
 <p>Los archivos TSV usan como separador o delimitador de columna el caracter TAB.</p>
 </blockquote>
 
-<p>Ejemplo TSV:
-<code>
-name    lastname    phone       email
+<h3 id="ejemplotsv:">Ejemplo TSV:</h3>
+
+<pre><code>name    lastname    phone       email
 john    smith       01342433    admin@demo.com
 karl    johnson     42342234    demo@demo.com
 carlos  martinez    4234234     hello@demo.com
-</code></p>
+</code></pre>
 
 <blockquote>
 <p>Para separar las columnas se usa la expresion regular <code>/\t+/</code> que en su lugar podria ser utilizada <code>/(\t+|\s{2}|\s{4})/</code>.</p>
@@ -26,18 +26,25 @@ carlos  martinez    4234234     hello@demo.com
 <p>Ver linea 38 del archivo <a href="dist/tsvToJson.ts#L38">dist/tsvToJson.ts</a></p>
 </blockquote>
 
-<p>Salida JSON:
-<code>json
-[
+<h3 id="salidajson:">Salida JSON:</h3>
+
+<pre><code class="json">[
     {&quot;name&quot;:&quot;carlos&quot;,&quot;lastname&quot;:&quot;martinez&quot;,&quot;phone&quot;:&quot;4234234&quot;,&quot;email&quot;:&quot;hello@demo.com&quot;},
     {&quot;name&quot;:&quot;carlos&quot;,&quot;lastname&quot;:&quot;martinez&quot;,&quot;phone&quot;:&quot;4234234&quot;,&quot;email&quot;:&quot;hello@demo.com&quot;},
     {&quot;name&quot;:&quot;carlos&quot;,&quot;lastname&quot;:&quot;martinez&quot;,&quot;phone&quot;:&quot;4234234&quot;,&quot;email&quot;:&quot;hello@demo.com&quot;}
 ]
-</code></p>
+</code></pre>
 
 <blockquote>
 <p>Es necesario usar la primera fila como nombre de columnas.</p>
+</blockquote>
 
+<h3 id="mododeuso:">Modo de uso:</h3>
+
+<pre><code class="javascript">new tsvToJson( 'file://sample.txt' );
+</code></pre>
+
+<blockquote>
 <p><strong>IMPORTANTE:</strong>
 Este proyecto fue escrito en TypeScript y compilado para ES5. Ademas, utiliza <a href="https://developer.mozilla.org/es/docs/XMLHttpRequest">XMLHttpRequest</a> para obtener el contenido del archivo y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> para convertir a formato JSON.</p>
 </blockquote>
